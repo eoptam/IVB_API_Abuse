@@ -183,8 +183,8 @@
             smartinfo.forEach(function(bus){
                 if(bus.latitude && bus.longitude && bus.latitude != 648000002 && bus.longitude != 648000002){
                     // Skalieren der Koordinaten, falls notwendig
-                    var lat = bus.latitude / 10000000;
-                    var lon = bus.longitude / 10000000;
+                    var lat = bus.latitude / 3600000;
+                    var lon = bus.longitude / 3600000;
                     L.marker([lat, lon], {
                         rotationAngle: bus.bearing
                     }).addTo(map)
